@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SOP XPRESS — Tell Us About You</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="navbar-inner">
+      <a href="index.html" class="logo">
+        <span class="sop">SOP</span><span class="xpress"> XPRESS</span>
+      </a>
+      <div style="display:flex; gap:8px; align-items:center; font-size:13px; color:var(--text-muted);">
+        <span style="background:var(--blue);color:white;width:22px;height:22px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;">1</span> Details &nbsp;
+        <span style="color:var(--border);">——</span>
+        <span style="width:22px;height:22px;border-radius:50%;border:2px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;color:var(--text-muted);">2</span> Payment &nbsp;
+        <span style="color:var(--border);">——</span>
+        <span style="width:22px;height:22px;border-radius:50%;border:2px solid var(--border);display:inline-flex;align-items:center;justify-content:center;font-weight:700;font-size:11px;color:var(--text-muted);">3</span> Done
+      </div>
+    </div>
+  </nav>
+
+  <!-- Form Page -->
+  <div class="form-page">
+    <div class="form-wrapper">
+
+      <!-- Header -->
+      <div class="form-header">
+        <div class="section-tag">Step 1 of 2</div>
+        <h1>Tell Us About <span class="text-blue">Your Goals</span></h1>
+        <p>Fill in your details so our writers can craft an SOP that truly represents you.</p>
+      </div>
+
+      <!-- Card -->
+      <div class="form-card">
+        <form id="sop-form" novalidate>
+
+          <!-- Personal Info -->
+          <div class="form-divider">Personal Information</div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="Arjun Sharma" autocomplete="name" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="input-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="arjun@email.com" autocomplete="email" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="input-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel" />
+              <span class="error-msg"></span>
+            </div>
+            <div class="input-group">
+              <label for="country">Target Country *</label>
+              <input type="text" id="country" name="country" placeholder="USA, UK, Canada…" />
+              <span class="error-msg"></span>
+            </div>
+          </div>
+
+          <!-- Academic Info -->
+          <div class="form-divider">Academic Details</div>
+
+          <div class="input-group">
+            <label for="university">Target University *</label>
+            <input type="text" id="university" name="university" placeholder="e.g. University of Toronto" />
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="program">Program / Course *</label>
+            <input type="text" id="program" name="program" placeholder="e.g. MSc Data Science" />
+            <span class="error-msg"></span>
+          </div>
+
+          <div class="input-group">
+            <label for="deadline">Application Deadline *</label>
+            <input type="date" id="deadline" name="deadline" />
+            <span class="error-msg"></span>
+          </div>
+
+          <!-- SOP Type -->
+          <div class="form-divider">Choose Your Plan</div>
+
+          <div class="radio-wrapper">
+            <div class="radio-group">
+
+              <div class="radio-option">
+                <input type="radio" id="standard" name="sop_type" value="standard" />
+                <label for="standard">
+                  <span class="radio-icon">📄</span>
+                  <span>Standard</span>
+                  <span class="radio-price">₹999</span>
+                  <span style="font-size:11px;color:var(--text-muted);font-weight:400;">5–7 Day Delivery</span>
+                </label>
+              </div>
+
+              <div class="radio-option">
+                <input type="radio" id="express" name="sop_type" value="express" />
+                <label for="express">
+                  <span class="radio-icon">⚡</span>
+                  <span>Express</span>
+                  <span class="radio-price">₹1999</span>
+                  <span style="font-size:11px;color:var(--text-muted);font-weight:400;">24–48 Hr Delivery</span>
+                </label>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Resume Upload -->
+          <div class="form-divider">Resume (Optional)</div>
+
+          <div class="input-group">
+            <label>Upload Your Resume</label>
+            <label class="file-upload" for="resume">
+              <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" />
+              <div class="upload-icon">📎</div>
+              <p><strong>Click to upload</strong> or drag & drop</p>
+              <p>PDF, DOC, DOCX — max 5 MB</p>
+              <p class="file-name" style="margin-top:8px; font-size:12px; color:var(--blue); font-weight:600;"></p>
+            </label>
+          </div>
+
+          <!-- Submit -->
+          <button type="submit" class="btn btn-red btn-full" style="margin-top:8px;">
+            Continue to Payment &rarr;
+          </button>
+
+          <p style="text-align:center; font-size:12px; color:var(--text-muted); margin-top:14px;">
+            🔒 Your information is 100% confidential and secure.
+          </p>
+
+        </form>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
